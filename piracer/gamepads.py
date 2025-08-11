@@ -173,41 +173,41 @@ class ShanWanGamepad(Joystick):
             self.gamepad_input.analog_stick_left.x = axis_val
         elif axis_number == 1:
             self.gamepad_input.analog_stick_left.y = -axis_val
-        elif button_number == 10:
+        elif axis_number == 2:
             self.gamepad_input.analog_stick_left.z = button_state
 
-        elif axis_number == 2:
-            self.gamepad_input.analog_stick_right.x = axis_val
         elif axis_number == 3:
+            self.gamepad_input.analog_stick_right.x = axis_val
+        elif axis_number == 4:
             self.gamepad_input.analog_stick_right.y = -axis_val
-        elif button_number == 11:
+        elif axis_number == 5:
             self.gamepad_input.analog_stick_right.z = button_state
 
         elif button_number == 4:
             self.gamepad_input.button_l1 = button_state
-        elif button_number == 6:
-            self.gamepad_input.button_l2 = button_state
+        elif button_number == 9:
+            self.gamepad_input.button_l = button_state
 
         elif button_number == 5:
             self.gamepad_input.button_r1 = button_state
-        elif button_number == 7:
-            self.gamepad_input.button_r2 = button_state
+        elif button_number == 10:
+            self.gamepad_input.button_r = button_state
 
-        elif button_number == 2:
+        elif button_number == 0:
             self.gamepad_input.button_a = button_state
         elif button_number == 1:
             self.gamepad_input.button_b = button_state
-        elif button_number == 3:
+        elif button_number == 2:
             self.gamepad_input.button_x = button_state
-        elif button_number == 0:
+        elif button_number == 3:
             self.gamepad_input.button_y = button_state
         elif button_number == 1:
             self.gamepad_input.button_b = button_state
-        elif button_number == 12:
-            self.gamepad_input.button_home = button_state
         elif button_number == 8:
+            self.gamepad_input.button_home = button_state
+        elif button_number == 6:
             self.gamepad_input.button_select = button_state
-        elif button_number == 9:
+        elif button_number == 7:
             self.gamepad_input.button_start = button_state
 
         return self.gamepad_input

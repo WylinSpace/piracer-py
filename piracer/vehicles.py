@@ -9,7 +9,6 @@ from adafruit_pca9685 import PCA9685
 from adafruit_ina219 import INA219
 from adafruit_ssd1306 import SSD1306_I2C
 
-
 class PiRacerBase:
     """
     Base class that contains everything common from PiRacer Standard and PiRacer Pro
@@ -77,7 +76,7 @@ class PiRacerPro(PiRacerBase):
         super().__init__()
         self.pwm_controller = PCA9685(self.i2c_bus, address=0x40)
         self.pwm_controller.frequency = self.PWM_FREQ_50HZ
-        self.battery_monitor = INA219(self.i2c_bus, addr=0x42)
+        self.battery_monitor = INA219(self.i2c_bus, addr=0x41)
 
         self._warmup()
 
