@@ -43,7 +43,7 @@ PCA9685_I2C_BUSNUM = None   #None will auto detect, which is fine on the pi. But
 #DC_STEER_THROTTLE uses HBridge pwm to control one steering dc motor, and one drive wheel motor
 #DC_TWO_WHEEL uses HBridge pwm to control two drive motors, one on the left, and one on the right.
 #SERVO_HBRIDGE_PWM use ServoBlaster to output pwm control from the PiZero directly to control steering, and HBridge for a drive motor.
-DRIVE_TRAIN_TYPE = "SERVO_ESC" # SERVO_ESC|DC_STEER_THROTTLE|DC_TWO_WHEEL|SERVO_HBRIDGE_PWM
+DRIVE_TRAIN_TYPE = "CUSTOM_DRIVING_MODE" # SERVO_ESC|DC_STEER_THROTTLE|DC_TWO_WHEEL|SERVO_HBRIDGE_PWM
 
 #STEERING
 STEERING_CHANNEL = 0            #channel on the 9685 pwm board 0-15
@@ -70,6 +70,15 @@ HBRIDGE_PIN_LEFT_BWD = 16
 HBRIDGE_PIN_RIGHT_FWD = 15
 HBRIDGE_PIN_RIGHT_BWD = 13
 
+#CUSTOM_DRIVING_MODE - with two wheels as drive, left and right, and one servo as steering.
+#This is used to set the driving mode of the car. It can be set to 'local' for local control, 'ai' for AI control, or 'remote' for remote control.
+PWM_STEERING_CHANNEL = 0
+PWM_THROTTLE_CHANNEL_LEFT_MOTOR_IN1 = 5
+PWM_THROTTLE_CHANNEL_LEFT_MOTOR_IN2 = 6
+PWM_THROTTLE_CHANNEL_LEFT_MOTOR_PWM = 7
+PWM_THROTTLE_CHANNEL_RIGHT_MOTOR_IN1 = 1
+PWM_THROTTLE_CHANNEL_RIGHT_MOTOR_IN2 = 2
+PWM_THROTTLE_CHANNEL_RIGHT_MOTOR_PWM = 0
 
 #TRAINING
 #The DEFAULT_MODEL_TYPE will choose which model will be created at training time. This chooses

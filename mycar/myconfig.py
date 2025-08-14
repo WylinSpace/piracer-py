@@ -31,27 +31,27 @@ print("MYCONFIG LOADED")
 # CSIC_CAM_GSTREAMER_FLIP_PARM = 0 # (0 => none , 4 => Flip horizontally, 6 => Flip vertically)
 # 
 # #9865, over rides only if needed, ie. TX2..
-PCA9685_I2C_ADDR = 0x40     #steering I2C address, use i2cdetect to validate this number
-PCA9685_I2C_ADDR1 = 0x60    #throttle I2C address, use i2cdetect to validate this number
-PCA9685_I2C_BUSNUM = 1   #None will auto detect, which is fine on the pi. But other platforms should specify the bus num.
+#PCA9685_I2C_ADDR = 0x40     #steering I2C address, use i2cdetect to validate this number
+#PCA9685_I2C_ADDR1 = 0x60    #throttle I2C address, use i2cdetect to validate this number
+#PCA9685_I2C_BUSNUM = 1   #None will auto detect, which is fine on the pi. But other platforms should specify the bus num.
 # 
 # #DRIVETRAIN
 # #These options specify which chasis and motor setup you are using. Most are using SERVO_ESC.
 # #DC_STEER_THROTTLE uses HBridge pwm to control one steering dc motor, and one drive wheel motor
 # #DC_TWO_WHEEL uses HBridge pwm to control two drive motors, one on the left, and one on the right.
 # #SERVO_HBRIDGE_PWM use ServoBlaster to output pwm control from the PiZero directly to control steering, and HBridge for a drive motor.
-DRIVE_TRAIN_TYPE = "SERVO_ESC" # SERVO_ESC|DC_STEER_THROTTLE|DC_TWO_WHEEL|SERVO_HBRIDGE_PWM
+# DRIVE_TRAIN_TYPE = "SERVO_ESC" # SERVO_ESC|DC_STEER_THROTTLE|DC_TWO_WHEEL|SERVO_HBRIDGE_PWM
 # 
 # #STEERING
-STEERING_CHANNEL = 0            #channel on the 9685 pwm board 0-15
-STEERING_LEFT_PWM = 310         #pwm value for full left steering
-STEERING_RIGHT_PWM = 630        #pwm value for full right steering
+# STEERING_CHANNEL = 0            #channel on the 9685 pwm board 0-15
+# STEERING_LEFT_PWM = 310         #pwm value for full left steering
+# STEERING_RIGHT_PWM = 630        #pwm value for full right steering
 # 
 # #THROTTLE
-THROTTLE_CHANNEL = 1            #channel on the 9685 pwm board 0-15
-THROTTLE_FORWARD_PWM = 500      #pwm value for max forward throttle
-THROTTLE_STOPPED_PWM = 370      #pwm value for no movement
-THROTTLE_REVERSE_PWM = 220      #pwm value for max reverse throttle
+# THROTTLE_CHANNEL = 1            #channel on the 9685 pwm board 0-15
+# THROTTLE_FORWARD_PWM = 500      #pwm value for max forward throttle
+# THROTTLE_STOPPED_PWM = 370      #pwm value for no movement
+# THROTTLE_REVERSE_PWM = 220      #pwm value for max reverse throttle
 # 
 # #DC_STEER_THROTTLE with one motor as steering, one as drive
 # #these GPIO pinouts are only used for the DRIVE_TRAIN_TYPE=DC_STEER_THROTTLE
